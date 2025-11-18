@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next"
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://campaignbutler.vercel.app"
+  const baseUrl = "https://campaign-butler-galihm.vercel.app"
 
   return {
     rules: [

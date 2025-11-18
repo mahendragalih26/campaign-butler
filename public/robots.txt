@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://campaign-butler-galihm.vercel.app/sitemap.xml

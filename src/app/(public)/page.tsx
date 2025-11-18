@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Campaign Butler - All in One Campaign Management Solution",
       description:
         "Campaign Butler is a all in one campaign management solution for your business.",
-      url: "https://campaignbutler.vercel.app/",
+      url: "https://campaign-butler-galihm.vercel.app/",
       locale: "id_ID",
       type: "website",
       images: [
@@ -38,7 +38,7 @@ export async function generateMetadata(): Promise<Metadata> {
         "Campaign Butler is a all in one campaign management solution for your business.",
       images: ["/og.png"], // Replace with actual image URL
       creator: "@campaignbutler",
-      site: "https://campaignbutler.vercel.app/",
+      site: "https://campaign-butler-galihm.vercel.app/",
     },
     alternates: {
       canonical: "/",
