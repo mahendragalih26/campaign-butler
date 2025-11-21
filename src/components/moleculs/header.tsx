@@ -6,10 +6,12 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a] border-b border-gray-800">
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex">
-          <span className="text-white text-xl font-semibold">Campaign</span>
-          <span className="text-red-600 text-xl font-semibold">Butler</span>
+        {/* Logo with Red Triangle */}
+        <div className="flex items-center gap-2">
+          <div className="flex">
+            <span className="text-white text-xl font-semibold">Campaign</span>
+            <span className="text-red-600 text-xl font-semibold">Butler</span>
+          </div>
         </div>
 
         {/* Navigation Links */}
@@ -27,19 +29,19 @@ const Header = () => {
             Pricing
           </a>
           <a
+            href="#about"
+            className="text-white hover:text-red-500 transition-colors"
+          >
+            About
+          </a>
+          <a
             href="#support"
             className="text-white hover:text-red-500 transition-colors"
           >
             Support
           </a>
-          <a
-            href="#blog"
-            className="text-white hover:text-red-500 transition-colors"
-          >
-            Blog
-          </a>
           <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded transition-colors">
-            Contact Us
+            Contact
           </button>
         </div>
 

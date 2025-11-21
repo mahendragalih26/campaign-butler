@@ -40,8 +40,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-schibsted-grotesk: "Schibsted Grotesk", sans-serif;
+  --font-schibsted-grotesk-medium: "Schibsted Grotesk Medium", sans-serif;
+  --font-schibsted-grotesk-extra-bold: "Schibsted Grotesk ExtraBold", sans-serif;
+  --font-schibsted-grotesk-semi-bold: "Schibsted Grotesk SemiBold", sans-serif;
+  --font-schibsted-grotesk-semi-bold-italic: "Schibsted Grotesk SemiBold Italic",
+    sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,6 +53,11 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 .font-schibsted-grotesk {

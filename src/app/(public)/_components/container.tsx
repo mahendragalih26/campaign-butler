@@ -1,15 +1,16 @@
 "use client"
 
-import Header from "@/components/organisms/header"
-import HeroSection from "@/components/organisms/hero-section"
-import FeatureShowcase from "@/components/organisms/feature-showcase"
-import WhyChoose from "@/components/organisms/why-choose"
-import Testimonial from "@/components/organisms/testimonial"
-import Experience from "@/components/organisms/experience"
-import ServingCampaigns from "@/components/organisms/serving-campaigns"
-import ServicePackages from "@/components/organisms/service-packages"
-import ContactForm from "@/components/organisms/contact-form"
-import VisibilitySection from "@/components/organisms/visibility-section"
+import Header from "@/components/moleculs/header"
+import HeroSection from "@/app/(public)/_components/landing/hero-section"
+import FeatureShowcase from "@/app/(public)/_components/landing/feature-showcase"
+import WhyChoose from "@/app/(public)/_components/landing/why-choose"
+import Testimonial from "@/app/(public)/_components/landing/testimonial"
+import Experience from "@/app/(public)/_components/landing/experience"
+import ServingCampaigns from "@/app/(public)/_components/landing/serving-campaigns"
+import ServicePackages from "@/app/(public)/_components/landing/service-packages"
+import ContactForm from "@/app/(public)/_components/landing/contact-form"
+import VisibilitySection from "@/app/(public)/_components/landing/visibility-section"
+import Footer from "@/app/(public)/_components/landing/footer"
 
 const Container = () => {
   return (
@@ -24,6 +25,7 @@ const Container = () => {
       <ServicePackages />
       <ContactForm />
       <VisibilitySection />
+      <Footer />
     </div>
   )
 }
