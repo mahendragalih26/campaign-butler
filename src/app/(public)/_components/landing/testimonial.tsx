@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Icon } from "@iconify/react"
+import DotsIndicator from "@/components/atoms/dots-indicator"
 
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -115,12 +116,11 @@ const Testimonial = () => {
           {/* Dots Indicator */}
           <div className="flex items-center justify-center gap-2 mt-6">
             {testimonials.map((_, index) => (
-              <button
+              <DotsIndicator
                 key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === currentIndex ? "bg-red-600 w-8" : "bg-gray-300"
-                }`}
+                index={index}
+                currentIndex={currentIndex}
+                setCurrentIndex={setCurrentIndex}
               />
             ))}
           </div>

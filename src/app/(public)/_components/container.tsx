@@ -11,6 +11,7 @@ import ServicePackages from "@/app/(public)/_components/landing/service-packages
 import ContactForm from "@/app/(public)/_components/landing/contact-form"
 import VisibilitySection from "@/app/(public)/_components/landing/visibility-section"
 import Footer from "@/app/(public)/_components/landing/footer"
+import CampaignToolkit from "./landing/campaign-toolkit"
 
 const Container = () => {
   return (
@@ -20,6 +21,7 @@ const Container = () => {
       <FeatureShowcase />
       <WhyChoose />
       <Testimonial />
+      <CampaignToolkit />
       <Experience />
       <ServingCampaigns />
       <ServicePackages />

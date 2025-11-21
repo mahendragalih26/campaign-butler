@@ -4,7 +4,7 @@ const FeatureShowcase = () => {
   return (
     <section className="py-20 px-6 bg-white">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-x-8 gap-y-15">
           {/* Dashboard Illustration */}
           <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-8 shadow-lg">
             <div className="space-y-6">
@@ -64,6 +64,35 @@ const FeatureShowcase = () => {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+
+          {/* Dashboard Description */}
+          <div className="bg-white rounded-lg p-8 ">
+            <div className="space-y-6">
+              <h2 className="text-6xl font-bold text-black">
+                The Campaign Challange
+              </h2>
+              <p className="text-gray-600">
+                From digital presence to boots on the ground, we deliver the
+                tools, technology, and expertise that modern campaigns need to
+                connect with voters and secure victory.
+              </p>
+            </div>
+          </div>
+
+          {/* Browser Interface Desc*/}
+          <div className="bg-white rounded-lg p-8 ">
+            <div className="space-y-6">
+              <h2 className="text-6xl font-bold text-black">
+                The Campaign Butler Solution
+              </h2>
+              <p className="text-gray-600">
+                we've created the first truly integrated campaign platform that
+                handles everything from your domain name to your communication
+                gaps. reduces costs, and dramatically increases your campaign's
+                effectiveness.
+              </p>
             </div>
           </div>
 
