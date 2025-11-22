@@ -27,25 +27,33 @@ const HeroSection = () => {
               tools, technology, and expertise that modern campaigns need to
               connect with voters and secure victory.
             </p>
-            <div className="flex items-center gap-2">
-              <span>Find Your Domain </span>
-              <div className="w-auto px-3 justify-between py-3 bg-gray-800/50  rounded-lg outline-none">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-2">
+              <span className="text-white text-sm sm:text-base whitespace-nowrap">
+                Find Your Domain
+              </span>
+              <div className="flex items-center w-full sm:w-auto px-3 py-3 bg-gray-800/50 rounded-lg outline-none gap-2">
                 <input
                   type="text"
                   name="domain"
                   // value={formData.email}
                   // onChange={handleChange}
                   required
-                  className=" outline-none"
+                  className="flex-1 outline-none bg-transparent text-white placeholder-gray-400 text-sm sm:text-base"
                   placeholder="Type Here.."
                 />
-                <span className="flex-end">| .vote</span>
+                <span className="text-white text-sm sm:text-base whitespace-nowrap">
+                  | .vote
+                </span>
               </div>
-              <Button variant="outline" className="font-bold">
-                Search{" "}
+              <Button
+                variant="outline"
+                className="font-bold w-full sm:w-auto justify-center"
+              >
+                <span className="hidden sm:inline">Search </span>
+                <span className="sm:hidden">Search Domain</span>
                 <Icon
                   icon="solar:arrow-right-up-linear"
-                  className="w-6 h-6 text-red-600"
+                  className="w-5 h-5 sm:w-6 sm:h-6 text-red-600"
                 />
               </Button>
             </div>
@@ -58,16 +66,19 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center gap-2 justify-between w-full">
+        <div className="flex items-center gap-2 justify-between w-full md:flex-row flex-col md:mt-0 mt-12">
           <Button variant={"default"} className="">
             Launch your Campaign today
-            <Icon icon="solar:arrow-right-up-linear" className="w-5 h-5" />
+            <Icon
+              icon="solar:arrow-right-up-linear"
+              className="w-5 h-5 md:w-6 md:h-6"
+            />
           </Button>
           <Divider
             orientation="horizontal"
             thickness="thin"
             color="white"
-            className="flex-1"
+            className="flex-1 hidden md:block"
           />
           <div>
             <Button variant={"ghost"} className="">

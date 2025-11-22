@@ -10,7 +10,7 @@ import ServingCampaigns from "@/app/(public)/_components/landing/serving-campaig
 import ServicePackages from "@/app/(public)/_components/landing/service-packages"
 import ContactForm from "@/app/(public)/_components/landing/contact-form"
 import VisibilitySection from "@/app/(public)/_components/landing/visibility-section"
-import Footer from "@/app/(public)/_components/landing/footer"
+import Footer from "@/components/moleculs/footer"
 import CampaignToolkit from "./landing/campaign-toolkit"
 
 const Container = () => {
