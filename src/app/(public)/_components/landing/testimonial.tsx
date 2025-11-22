@@ -34,8 +34,13 @@ const Testimonial = () => {
   const partners = ["Planned Parenthood", "1C CS", "NARAL", "Partners"]
 
   return (
-    <section className="py-20 px-6 bg-white">
-      <div className="container mx-auto">
+    <section
+      className="py-20"
+      style={{
+        background: "linear-gradient(to bottom, white 50%, #0a0a0a 50%)",
+      }}
+    >
+      <div className="container mx-auto px-6">
         {/* Testimonial Carousel */}
         <div className="relative max-w-4xl mx-auto">
           {/* Profile Images */}
@@ -61,10 +66,10 @@ const Testimonial = () => {
           {/* Quote */}
           <div className="bg-gray-50 rounded-lg p-8 md:p-12 text-center relative">
             <div className="absolute top-4 left-4 text-red-600 text-6xl font-serif">
-              "
+              <span>&quot;</span>
             </div>
             <div className="absolute bottom-4 right-4 text-red-600 text-6xl font-serif">
-              "
+              <span>&quot;</span>
             </div>
 
             <div className="relative z-10">
@@ -125,18 +130,17 @@ const Testimonial = () => {
             ))}
           </div>
         </div>
-
-        {/* Partner Logos */}
-        <div className="mt-16 flex items-center justify-center gap-8 flex-wrap">
-          {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="px-6 py-3 bg-gray-100 rounded-lg text-gray-600 font-medium text-sm"
-            >
-              {partner}
-            </div>
-          ))}
-        </div>
+      </div>
+      {/* Partner Logos */}
+      <div className="mt-16 flex items-center justify-center gap-8 flex-wrap z-10">
+        {partners.map((partner, index) => (
+          <div
+            key={index}
+            className="px-6 py-3 bg-gray-100 rounded-lg text-gray-600 font-medium text-sm"
+          >
+            {partner}
+          </div>
+        ))}
       </div>
     </section>
   )

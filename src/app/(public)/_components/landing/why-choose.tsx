@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react"
 
 const WhyChoose = () => {
   return (
-    <section className="py-20 bg-white text-white">
+    <section className="py-10 bg-white text-white">
       <div
         className="rounded-tl-[20%] rounded-tr-3xl px-6 py-20"
         style={{

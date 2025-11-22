@@ -88,10 +88,9 @@ const FeatureShowcase = () => {
                 The Campaign Butler Solution
               </h2>
               <p className="text-gray-600">
-                we've created the first truly integrated campaign platform that
-                handles everything from your domain name to your communication
-                gaps. reduces costs, and dramatically increases your campaign's
-                effectiveness.
+                {
+                  "we've created the first truly integrated campaign platform that handles everything from your domain name to your communication gaps. reduces costs, and dramatically increases your campaign's effectiveness."
+                }
               </p>
             </div>
           </div>

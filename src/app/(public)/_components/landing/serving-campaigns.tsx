@@ -7,24 +7,23 @@ const ServingCampaigns = () => {
     {
       title: "All 50 States",
       icon: "mdi:map",
-      description: "Nationwide coverage for campaigns across the United States",
+      description: "Compliant solutions for campaigns anywhere in America",
     },
     {
       title: "Every Race",
       icon: "mdi:run",
-      description:
-        "From local elections to federal positions, we support all levels",
+      description: "From city council to congressional campaigns",
     },
     {
       title: "Specialized",
       icon: "mdi:target",
-      description: "Tailored solutions for your specific campaign needs",
+      description:
+        "Expertise in school board, judicial, and other specialized races",
     },
     {
       title: "Partisan & Non-Partisan",
       icon: "mdi:account-group",
-      description:
-        "Serving candidates and organizations across the political spectrum",
+      description: "Solutions for every type of campaign",
     },
   ]
 
@@ -38,15 +37,22 @@ const ServingCampaigns = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors text-center"
+              className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors gap-2"
             >
-              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon icon={service.icon} className="w-8 h-8 text-white" />
+              <div className="flex items-center justify-center gap-4">
+                <div className="w-16 h-16 flex items-center justify-center mb-2 min-w-16 min-h-16">
+                  <Icon
+                    icon={service.icon}
+                    className="w-10 h-10 text-red-600"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {service.title}
+                </h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 text-sm">{service.description}</p>
+              <p className="text-gray-600 text-md col-span-2 px-6">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>

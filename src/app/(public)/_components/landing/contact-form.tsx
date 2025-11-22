@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Icon } from "@iconify/react"
+import { Button } from "@/components/atoms/button"
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,8 @@ const ContactForm = () => {
     email: "",
     phone: "",
     message: "",
+    last_name: "",
+    "terms-of-service": false,
   })
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -27,24 +30,24 @@ const ContactForm = () => {
   }
 
   const benefits = [
-    "Same-day response",
-    "Complete transparency",
-    "Expert consultation",
-    "Customized solutions",
+    "<span class='font-bold text-lg'>Same-day</span> Domain and email setup",
+    "<span class='font-bold text-lg'>Professional</span> website within 72 hours",
+    "<span class='font-bold text-lg'>Dedicated</span> campaign strategist",
+    "<span class='font-bold text-lg'>Complete</span> onboarding and training",
   ]
 
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-20 px-6 bg-black">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left - Benefits */}
           <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-              Ready to Launch Your Winning Campaign?
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
+              Ready to Launch Your{" "}
+              <span className="text-red-600">Winning Campaign</span>
             </h2>
-            <p className="text-lg text-gray-600">
-              Connect with Campaign Butler today and discover how we can help
-              you achieve victory.
+            <p className="text-lg text-white">
+              Get started today with Campaign Butler and receive:
             </p>
             <ul className="space-y-4">
               {benefits.map((benefit, index) => (
@@ -52,22 +55,19 @@ const ContactForm = () => {
                   <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <Icon icon="mdi:check" className="w-4 h-4 text-white" />
                   </div>
-                  <span className="text-gray-700">{benefit}</span>
+                  <span
+                    className="text-white"
+                    dangerouslySetInnerHTML={{ __html: benefit }}
+                  />
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Right - Contact Form */}
-          <div className="bg-gray-50 rounded-lg p-8">
+          <div className="bg-transparent rounded-lg p-8 text-white">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-                  Name
-                </label>
                 <input
                   type="text"
                   id="name"
@@ -75,18 +75,25 @@ const ContactForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
-                  placeholder="Your name"
+                  className="w-full px-4 py-3 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent text-white"
+                  placeholder="First Name"
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-                  Email
-                </label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  value={formData.last_name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent text-white"
+                  placeholder="Last Name"
+                />
+              </div>
+
+              <div>
                 <input
                   type="email"
                   id="email"
@@ -94,18 +101,12 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
-                  placeholder="your.email@example.com"
+                  className="w-full px-4 py-3 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent text-white"
+                  placeholder="Email"
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-                  Phone
-                </label>
                 <input
                   type="tel"
                   id="phone"
@@ -113,36 +114,34 @@ const ContactForm = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
-                  placeholder="(123) 456-7890"
+                  className="w-full px-4 py-3 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent text-white"
+                  placeholder="Phone Number (Optional)"
                 />
               </div>
 
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
+              <div className="flex gap-4">
+                <input
+                  type="checkbox"
+                  id="terms-of-service"
+                  name="terms-of-service"
+                  value={formData["terms-of-service"].toString()}
                   onChange={handleChange}
                   required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent resize-none"
-                  placeholder="Tell us about your campaign needs..."
+                  className="w-5 h-5 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent text-white"
                 />
+                <label htmlFor="terms-of-service">
+                  I agree to receive text messages from Campaign Butler. By
+                  checking this box and providing your phone number,{" "}
+                  <a href="/terms-of-service" className="text-red-600">
+                    Read more...
+                  </a>
+                </label>
               </div>
 
-              <button
-                type="submit"
-                className="w-full bg-red-600 hover:bg-red-700 text-white px-6 py-4 rounded-lg font-semibold text-lg transition-colors"
-              >
-                Submit to Campaign Butler
-              </button>
+              <Button variant={"default"} size="lg" className="">
+                Launch My Campaign
+                <Icon icon="solar:arrow-right-up-linear" className="w-8 h-8" />
+              </Button>
             </form>
           </div>
         </div>
