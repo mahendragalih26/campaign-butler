@@ -18,7 +18,7 @@ const Footer = () => {
               <span className="text-red-600 text-xl font-semibold">Butler</span>
             </div>
             <div className="text-gray-400 text-sm max-w-xs">
-              Win Your Next Election with Campaign Butler's All-in-One Solution
+              {`Win Your Next Election with Campaign Butler's All-in-One Solution`}
             </div>
           </div>
 

@@ -32,8 +32,6 @@ const CampaignToolkit = () => {
     },
   ]
 
-  const partners = ["Planned Parenthood", "1C CS", "NARAL", "Partners"]
-
   return (
     <section className="py-15 bg-white text-black">
       <div className="rounded-tl-[20%] rounded-tr-3xl px-6">

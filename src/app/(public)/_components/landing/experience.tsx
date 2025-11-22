@@ -3,8 +3,6 @@
 import { Icon } from "@iconify/react"
 
 const Experience = () => {
-  const services = ["Voter Outreach", "Ground Game", "Campaign Operations"]
-
   return (
     <section className="py-20 px-6 bg-black">
       <div className="container mx-auto">
@@ -17,13 +15,13 @@ const Experience = () => {
             </h2>
             <p className="text-md text-white leading-relaxed">
               <span className="font-bold text-red-500">Campaign Butler</span>{" "}
-              combines decades of political expertise with cutting-edge
+              {`combines decades of political expertise with cutting-edge
               marketing technology. We've helped candidates at every level-from
               school board to statewide office-connect with voters and win
               elections. Our team understands that exposure wins elections, but
               only when it's strategic, consistent, and targeted. That's why
               we've built the only truly integrated campaign marketing platform
-              that unites traditional outreach with digital essentials.
+              that unites traditional outreach with digital essentials.`}
             </p>
 
             {/* Success Icons Graphic */}
